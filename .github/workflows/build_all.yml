@@ -61,8 +61,12 @@ jobs:
       arch: ${{ matrix.arch }}
       build-deps-only: ${{ inputs.build-deps-only || false }}
     secrets: inherit
+
+
+
   flatpak:
     name: "Flatpak"
+    if: false
     container:
       image: ghcr.io/flathub-infra/flatpak-github-actions:gnome-46
       options: --privileged
